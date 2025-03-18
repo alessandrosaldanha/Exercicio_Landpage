@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "dev": "parcel src/index.html src/scripts/main.js src/styles/main.scss",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -10,6 +11,8 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "parcel": "^2.8.0"
+    "@parcel/transformer-sass": "^2.8.0",
+    "parcel": "^2.8.0",
+    "sharp": "^0.31.3"
   }
 }

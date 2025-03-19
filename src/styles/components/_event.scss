@@ -1,14 +1,59 @@
+@use './variables';
 .event {
+    padding: 80px 0;
+    &--front-end{
+        background-image: linear-gradient(#f6a902fc, #e515f4fc);
+    }
+    &--front-back{
+        background-image: linear-gradient(#06204c, #e515f4fc);
+    }
+    &--front-footr{
+        background-image: linear-gradient(#e515f4fc, #f6a902fc);
+    }
+    &--front-bottom{
+        background-image: linear-gradient(#e515f4fc, #f60212);
+    }
     .container{
         display: flex;
+        gap: 40px;
     }
+
+    &--image-left{
+        .container{
+            flex-direction: row-reverse;
+        }
+       
+    }
+
     &__image {
         max-width: 360px;
+        max-height: 600px;
     }
 
     &__details{
 
+        
+        &__title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        
+        }
+        &__description {
+            line-height: 22px;
+        }
     }
+    @media(max-width: 640px) {
+        .container {
+            display: block;
+        }
+        &__image{
+            max-width: 100%;
+        }
 
-    
+        &__details {
+            margin: 0;
+            margin-bottom: 16px;
+        }
+    }
 }
